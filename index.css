@@ -35,6 +35,12 @@ header {
   padding: 40px 40px;
   padding-bottom: 50px;
 }
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    background-color: #fd5b2f;
+  }
+}
 nav ul {
   display: flex;
 }
@@ -45,6 +51,11 @@ nav ul a li {
   line-height: 22px;
   font-family: sans-serif;
   font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+nav ul a li:hover {
+  color: blue;
+  text-decoration: underline;
 }
 header p {
   font-size: 25px;
@@ -110,6 +121,18 @@ h3::before {
   border-top-left-radius: 250px;
   border-top-right-radius: 250px;
 }
+.images h2 {
+  position: absolute;
+  transform: rotate(269deg);
+  right: -180px;
+  bottom: 120px;
+  font-family: "Axiforma";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 51.1924px;
+  line-height: 68px;
+  opacity: 0.3;
+}
 .images > img {
   height: 100%;
 
@@ -147,35 +170,39 @@ h3::before {
   justify-content: space-between;
   align-items: center;
 }
-.blur-effect p{
-    font-size: 22px;
-    margin-left: 20px;
-    
+.blur-effect p {
+  font-size: 22px;
+  margin-left: 20px;
 }
-.blur-effect button{
-    padding: 10px 20px;
-    margin-right: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: orangered;
-    font-size: 17px;
-    color: white;
+.blur-effect button {
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: orangered;
+  font-size: 17px;
+  color: white;
 }
-.people{
-    display: flex;
+.people {
+  margin-top: 30px;
+  display: flex;
 }
-.people img{
-    width: 40px;
-    position: relative;
-    left: 10px;
+.people .all-image {
+  display: flex;
+  gap: 0;
 }
-.people span{
-    margin-top: 5px;
-    width: 30px;
-    height: 30px;
-    background-color: #fd5b2f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+.people span {
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: #fd5b2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.people p {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 18px;
 }
